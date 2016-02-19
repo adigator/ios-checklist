@@ -14,21 +14,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="40" id="dV2-OE-YBZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="40" id="dV2-OE-YBZ">
                                 <rect key="frame" x="0.0" y="92" width="600" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dV2-OE-YBZ" id="RI5-zC-CaC">
-                                    <rect key="frame" x="0.0" y="0.0" width="561" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="533" height="39"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7e-8o-09Q">
-                                            <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                            <rect key="frame" x="41" y="8" width="551" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-VD-f6I">
+                                            <rect key="frame" x="15" y="8" width="18" height="23"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3eX-Ip-U9h" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="7Wt-ge-Qx0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,7 +48,7 @@
                     <navigationItem key="navigationItem" title="Checklist" id="KMO-zL-KO2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4tU-Vl-Hbg">
                             <connections>
-                                <segue destination="3eX-Ip-U9h" kind="presentation" id="u7n-4C-Zi7"/>
+                                <segue destination="3eX-Ip-U9h" kind="presentation" identifier="AddItem" id="u7n-4C-Zi7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -144,4 +153,7 @@
             <point key="canvasLocation" x="1899" y="416"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Wt-ge-Qx0"/>
+    </inferredMetricsTieBreakers>
 </document>
